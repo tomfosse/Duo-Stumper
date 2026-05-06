@@ -17,7 +17,7 @@ char *encrypt_str(char *str, int key)
     if (!str)
         return NULL;
     if (key == 0)
-        return str;
+        return strdup(str);
     len = strlen(str);
     output = malloc(sizeof(char) * (len + 1));
     if (!output)
