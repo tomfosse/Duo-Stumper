@@ -9,16 +9,15 @@ CC = epiclang
 
 NAME = cesar
 
-SRC =	\
+SRC = \
 	src/main.c
 OBJ = $(SRC:.c=.o)
-
-CLFAGS = -g -Wall -Wextra -Iinclude
-
-$(NAME):	$(OBJ)
-	$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
+CFLAGS = -Wall -Wextra -Iinclude
 
 all:	$(NAME)
+
+$(NAME):	$(OBJ)
+	$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
 
 clean:
 	rm -rf $(OBJ)
@@ -27,3 +26,4 @@ fclean:	clean
 	rm -rf $(NAME)
 
 re:	fclean	all
+
