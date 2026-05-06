@@ -8,7 +8,7 @@
 #ifndef CESAR_H
     #define CESAR_H
 
-    #define EXIT_ERROR 84;
+    #define EXIT_ERROR 84
 
 int my_char_is_alpha(char c);
 char *encrypt_str(char *str, int key);
