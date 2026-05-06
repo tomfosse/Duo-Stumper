@@ -14,8 +14,11 @@ SRC = \
 	src/handlers/encrypt/encrypt_handler.c	\
 	src/utils/my_char_is_alpha.c	\
 	src/handlers/encrypt/encrypt_negative_char.c	\
-	src/handlers/encrypt/encrypt_positive_char.c
+	src/handlers/encrypt/encrypt_positive_char.c	\
+	src/handlers/file/read_file.c
+
 OBJ = $(SRC:.c=.o)
+
 CFLAGS = -Wall -Wextra -Iinclude -g
 
 all:	$(NAME)
