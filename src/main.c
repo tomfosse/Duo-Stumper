@@ -29,12 +29,27 @@ int file_flag_handling(char *filepath, int key)
     return EXIT_SUCCESS;
 }
 
+static
+int string_flag_handling(char *str, int key)
+{
+    char *string = encrypt_str(str, key);
+
+    if (!string)
+        return EXIT_ERROR;
+    if (write_into_file(string) == EXIT_ERROR)
+        return EXIT_ERROR;
+    free(string);
+    return EXIT_SUCCESS;
+}
+
 int main(int ac, char **av)
 {
     int key = 0;
-    char *string = NULL;
 
     if (ac != 4)
+        return EXIT_ERROR;
+    key = my_is_num(av[3]);
+    if (key == EXIT_ERROR)
         return EXIT_ERROR;
     key = atoi(av[3]);
     if (strcmp(av[1], "-f") == EXIT_SUCCESS) {
@@ -43,10 +58,7 @@ int main(int ac, char **av)
         return EXIT_SUCCESS;
     }
     if (strcmp(av[1], "-s") == EXIT_SUCCESS) {
-        string = encrypt_str(av[2], key);
-        if (!string || write_into_file(string) == EXIT_ERROR)
-            return EXIT_ERROR;
-        free(string);
+        string_flag_handling(av[2], key);
         return EXIT_SUCCESS;
     }
     return EXIT_ERROR;
