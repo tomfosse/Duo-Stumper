@@ -14,5 +14,6 @@ int my_char_is_alpha(char c);
 char *encrypt_str(char *str, int key);
 char encrypt_negative_char(int key, char c);
 char encrypt_positive_char(int key, char c);
+char *parse_file(char *filepath);
 
 #endif
