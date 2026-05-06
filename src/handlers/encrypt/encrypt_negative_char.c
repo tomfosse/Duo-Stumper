@@ -17,7 +17,7 @@ char encrypt_negative_char(int key, char c)
             continue;
         }
         if (c == 'a') {
-            c = 'Z';
+            c = 'z';
             continue;
         }
         c--;
