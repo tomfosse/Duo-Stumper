@@ -16,5 +16,6 @@ char encrypt_negative_char(int key, char c);
 char encrypt_positive_char(int key, char c);
 char *parse_file(char *filepath);
 int write_into_file(char *message);
+int my_is_num(char *str);
 
 #endif
