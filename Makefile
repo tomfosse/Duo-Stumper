@@ -15,7 +15,8 @@ SRC = \
 	src/utils/my_char_is_alpha.c	\
 	src/handlers/encrypt/encrypt_negative_char.c	\
 	src/handlers/encrypt/encrypt_positive_char.c	\
-	src/handlers/file/read_file.c
+	src/handlers/file/read_file.c	\
+	src/handlers/file/write_into_file.c
 
 OBJ = $(SRC:.c=.o)
 
