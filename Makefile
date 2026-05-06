@@ -16,7 +16,8 @@ SRC = \
 	src/handlers/encrypt/encrypt_negative_char.c	\
 	src/handlers/encrypt/encrypt_positive_char.c	\
 	src/handlers/file/read_file.c	\
-	src/handlers/file/write_into_file.c
+	src/handlers/file/write_into_file.c	\
+	src/utils/my_is_num.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -34,4 +35,3 @@ fclean:	clean
 	rm -rf $(NAME)
 
 re:	fclean	all
-
