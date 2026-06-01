@@ -5,7 +5,7 @@
 ## The main compiler for the cesar project
 ##
 
-CC = epiclang
+CC = clang
 
 NAME = cesar
 
